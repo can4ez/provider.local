@@ -32,7 +32,7 @@ body {
 .promo__banner_circle {
     background-image: url(../img/circle-background.png);
     background-position: center -70px;
-    background-size: 100vw 100vw;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
@@ -70,17 +70,18 @@ header {
     display: flex;
     gap: 10px;
     font-weight: 600;
+    align-items: center;
 }
 
 .place__city {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
 .phoneNumber__number {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
 .main__promo {
@@ -95,12 +96,12 @@ header {
 }
 
 .info__title {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #fff;
 }
 
 .info__subtitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #fff;
 }
 
@@ -141,7 +142,7 @@ header {
 }
 
 .number {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #2d6cf9;
 }
@@ -153,7 +154,7 @@ header {
     padding: 15px 30px;
     transition: background-color .3s;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.2;
     text-align: center;
@@ -178,7 +179,7 @@ header {
 
 .tarif-wrapper p {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -215,6 +216,7 @@ header {
     margin-bottom: 50px;
     height: 100%;
     min-height: 700px;
+    width: 400px;
 }
 
 .card-mobile {
@@ -226,7 +228,8 @@ header {
 .home-telephone-slider {
     max-width: 100vw;
     overflow-x: hidden;
-    padding: 0 10px;
+    padding: 0;
+    margin: 0 auto;
 }
 
 /* Для карточек внутри слайдера */
@@ -287,7 +290,7 @@ header {
     flex-direction: column;
     position: relative;
     margin-bottom: 50px;
-
+    width: 400px;
 }
 
 .card-content {
@@ -306,6 +309,18 @@ header {
 
 .home-telephone-slider .card-content {
     min-height: 250px; /* Уменьшаем минимальную высоту контента карточек */
+}
+
+.home-telephone-slider .swiper-wrapper {
+    gap: 0 !important; /* Убираем все дополнительные отступы */
+}
+
+.home-telephone-slider .swiper-slide {
+    width: 60%; /* Устанавливаем ширину слайдов в процентах */
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -417,7 +432,6 @@ header {
 
 .home-telephone-slider .swiper-slide {
     width: 100%;
-    max-width: 100%;
     padding: 0 10px; /* Небольшие отступы по бокам */
 }
 
@@ -494,7 +508,7 @@ header {
 
 .tarif-title-change {
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .tarif-subtitle {
@@ -762,7 +776,6 @@ header {
 .footer__container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
 }
@@ -785,7 +798,7 @@ header {
 
 .footer__dealer {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .footer__phone {
@@ -793,7 +806,7 @@ header {
 }
 
 .footer__phone-number {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -807,7 +820,7 @@ header {
 .footer__link {
     color: #fff;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .footer__dot {
@@ -826,7 +839,7 @@ header {
 .footer__column-title {
     font-weight: 700;
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: #c6c2c2;
 }
 
@@ -871,7 +884,7 @@ header {
 }
 
 .footer__bottom-text {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
     width: 50vw;
     padding-bottom: 150px;
@@ -888,7 +901,7 @@ header {
 
 .footer__policy-link {
     color: #c6c2c2;
-    font-size: 1rem;
+    font-size: 0.8rem;
     transition: color 0.3s;
     text-decoration: underline;
 }
@@ -1106,7 +1119,7 @@ header {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 .left-links a:hover,
@@ -1122,7 +1135,7 @@ header {
 
 .location-icon {
     color: #aaa;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 /* Основное меню */
@@ -1151,7 +1164,7 @@ header {
 
 .mts-tarif-burger-menu {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .logo {
@@ -1174,7 +1187,7 @@ header {
 .main-nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .main-nav a:hover {
@@ -1263,7 +1276,7 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #6c757d;
 }
 
@@ -1291,13 +1304,13 @@ header {
     background-color: #1c1c1c;
     padding: 30px;
     border-radius: 10px;
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .address-check-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
     color: #fff;
 }
@@ -1331,7 +1344,6 @@ header {
 
 .map-link {
     display: block;
-    margin-top: 10px;
     color: #4da6ff;
     text-decoration: none;
 }
@@ -1352,12 +1364,12 @@ header {
     padding: 50px;
     border-radius: 20px;
     background: linear-gradient(to right, #8364f6, #ff79c6);
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 20px auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Обрезка содержимого за границами блока */
     position: relative;
-    height: 30vh;
+    height: 40vh;
 }
 
 /* Контентная часть */
@@ -1368,7 +1380,7 @@ header {
 
 /* Заголовок */
 .callback-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #fff;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -1381,18 +1393,19 @@ header {
 }
 
 .callback-input {
-    padding: 25px;
+    padding: 15px;
     border-radius: 10px;
     border: none;
     outline: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     background-color: rgba(255, 255, 255, 0.2);
     color: #fff;
-    width: 300px; 
+    width: 200px; 
+    height: auto;
 }
 
 .callback-button {
-    padding: 15px 25px;
+    padding: 10px 20px;
     border-radius: 10px;
     border: none;
     background-color: var(---color);
@@ -1400,8 +1413,9 @@ header {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 300px;
+    width: 200px;
     font-size: 1rem;
+    height: auto;
 }
 
 .callback-button:hover {
@@ -1554,13 +1568,13 @@ header {
 .mts-dealer-header__link,
 .mts-dealer-header__location,
 .mts-dealer-header__support {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #fff;
     text-decoration: none;
 }
 
 .mts-dealer-header__contact {
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: #fff;
 }
 
@@ -1595,7 +1609,7 @@ header {
 }
 
 .mts-dealer-header__menu-item {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #fff;
     text-decoration: none;
 }
@@ -1614,7 +1628,7 @@ header {
     display: flex;
     align-items: center;
     padding: 10px 40px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #fff;
 }
 
@@ -1643,7 +1657,7 @@ header {
     flex-direction: column;
     align-items: flex-end;
     padding: 20px;
-    max-width: 80%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     align-self: flex-end;
@@ -1653,7 +1667,7 @@ header {
 .mtsofficial-tariff-section__content {
     display: flex;
     align-items: flex-start;
-    gap: 150px;
+    gap: 100px;
     flex: 1;
 }
 
@@ -1663,7 +1677,7 @@ header {
 
 .mtsofficial-tariff-section__cat-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .mtsofficial-tariff-section__info {
@@ -1671,14 +1685,14 @@ header {
 }
 
 .mtsofficial-tariff-section__title {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #fff;
     padding-bottom: 10px;
 }
 
 .mtsofficial-tariff-section__subtitle {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #fff;
     margin-bottom: 20px;
 }
@@ -1690,7 +1704,7 @@ header {
 }
 
 .mtsofficial-tariff-section__service {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
 }
 
 .mtsofficial-tariff-section__icon {
@@ -1703,7 +1717,7 @@ header {
     border: none;
     text-align: left;
     outline: none;
-    font-size: 2.5rem;
+    font-size: 1rem;
     line-height: 30px;
     padding: 20px 12px;
     transition: 0.25s;
@@ -1769,7 +1783,7 @@ ul li {
 }
 
 .mtsofficial-tariff-section__price {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: var(---color);
     margin: 20px 0;
@@ -1779,14 +1793,14 @@ ul li {
 .mtsofficial-tariff-section__button {
     background-color: var(---color);
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    height: 5vh;
+    height: 50px;
 }
 
 .mtsofficial-tariff-section__button:hover {
@@ -1796,11 +1810,11 @@ ul li {
 /* Стили блока с описанием тарифа */
 .mtsofficial-tariff-section__details {
     margin-top: 40px;
-    width: 50%;
+    width: 60%;
 }
 
 .mtsofficial-tariff-section__details h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: #fff;
@@ -1811,7 +1825,7 @@ ul li {
 }
 
 .mtsofficial-tariff-section__details li {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
@@ -1822,11 +1836,11 @@ ul li {
 .mtsofficial-tariff-section__service-home,
 .mtsofficial-tariff-section__service-mobile {
     color: #777;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .servise-plus {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     padding-top: 10px;
     color: #fff;
@@ -2768,7 +2782,21 @@ display: none;
     
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1920px) {
+
+    .promo__banner_circle {
+        background-image: url(../img/circle-background.png);
+        background-position: center -70px;
+        background-size: 100vw 100vw;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        z-index: -1;
+    }
+
     .center {
         padding-left: 10%;
         padding-right: 10%;
@@ -2830,4 +2858,360 @@ display: none;
     .close-button {
         font-size: 3rem; /* Увеличьте размер кнопки закрытия */
     }
+
+    .place__city {
+        font-size: 1.5rem;
+    }
+
+    .phoneNumber__number {
+        font-size: 1.8rem;
+    }
+
+    .button {
+        padding: 25px 35px;
+        font-size: 2rem;
+    }
+
+    .tarif-title-change {
+        color: #fff;
+        font-size: 3rem;
+    }
+
+    .tarif-wrapper p {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 500px;
+        min-height: 800px;
+    }
+
+    .swiper-slide .card {
+        height: 70%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .tarif-title, .tarif-subtitle, .tarif-detail, .speed, .slider, 
+.speed-options, .tv-channels, .mobile-data, .data-details, .minutes, 
+.extras, .price, .connect-btn, .more-btn {
+    width: 100%; /* Full width for each element */
+    padding-top: 10px;
 }
+
+.price-details {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.tarif-title {
+    font-weight: bold;
+    font-size: 2em;
+    color: #fff;
+}
+
+.tarif-title-change {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.tarif-subtitle {
+    color: #fff;
+    font-size: 1.3em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.tarif-detail, .tv-channels, .mobile-data, .data-details, .minutes {
+    font-size: 1.3em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.tarif-detail, .mobile-data {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.speed, .price, .data-details, .minutes, .tv-channels{
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 5px;
+}
+
+.extras {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.extras img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+.tarif {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__dealer {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+.footer__phone-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.footer__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+.footer__column-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #c6c2c2;
+}
+.footer__item a {
+    color: #c6c2c2;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s;
+}
+.footer__bottom-text {
+    font-size: 1rem;
+    text-align: center;
+    width: 50vw;
+    padding-bottom: 150px;
+}
+.footer__policy-link {
+    font-size: 1rem;
+}
+
+.number {
+    font-size: 2rem;
+}
+
+.fixed__button_block {
+    padding: 20px 35px;
+    font-size: 2rem;
+}
+
+.left-links a,
+.right-links a {
+    font-size: 1.2rem;
+}
+
+.location-icon {
+    font-size: 1.2rem;
+}
+
+.main-nav a {
+    font-size: 1.4rem;
+}
+
+.address-check-container {
+    max-width: 1500px;
+}
+
+.breadcrumb-list {
+    font-size: 1.3rem;
+}
+
+.login-button, .catalog-button {
+    padding: 15px 25px;
+    font-size: 1.3rem;
+}
+
+.search-input {
+    padding: 15px 15px 15px 35px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #2b2b2b;
+    color: #fff;
+    width: 300px;
+    transition: width 0.3s ease;
+    font-size: 1rem;
+}
+
+.check-button {
+    padding: 15px 25px;
+    font-size: 1.3rem;
+}
+
+.address-input {
+    font-size: 1rem;
+}
+
+.callback-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #8364f6, #ff79c6);
+    max-width: 1500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Обрезка содержимого за границами блока */
+    position: relative;
+    height: 30vh;
+}
+.callback-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.callback-input {
+    padding: 25px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    width: 300px; 
+    height: auto;
+}
+
+.callback-button {
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(---color);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 300px;
+    font-size: 1.3rem;
+    height: auto;
+}
+
+.mts-dealer-header__link, .mts-dealer-header__location, .mts-dealer-header__support {
+    font-size: 1.3rem;
+}
+
+.mts-dealer-header__contact {
+    font-size: 1.5rem;
+}
+
+.mts-dealer-header__menu-item {
+    font-size: 1.3rem;
+}
+
+.mts-dealer-breadcrumbs {
+    font-size: 1.3rem;
+}
+
+.mtsofficial-tariff-section__cat-image {
+    max-width: 500px;
+}
+
+.mtsofficial-tariff-section__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 10px;
+}
+.mtsofficial-tariff-section__subtitle {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.accordion {
+    font-size: 1.7rem;
+}
+
+.servise-plus {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 10px;
+    color: #fff;
+    display: flex;
+}
+
+.mtsofficial-tariff-section__service-home, .mtsofficial-tariff-section__service-mobile {
+    color: #777;
+    font-size: 1.3rem;
+}
+
+.mtsofficial-tariff-section__subtitle {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.mtsofficial-tariff-section__price {
+    font-size: 2.5rem;
+}
+
+.mtsofficial-tariff-section__button {
+    background-color: var(---color);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    height: 80px;
+}
+
+.mtsofficial-tariff-section__details li {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.mtsofficial-tariff-section__details h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.servise-plus path {
+    fill: #fff;
+    width: 40px;
+    height: 40px;
+}
+
+.footer__bottom-text-tarif {
+    padding-bottom: 0;
+}
+
+.place__icon svg {
+    width: 30px; /* Новая ширина */
+    height: 30px; /* Новая высота */
+}
+
+.phoneNumber__icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.place__icon-tarif svg {
+    width: 25px; /* Новая ширина */
+    height: 25px; /* Новая высота */
+}
+
+.mtsofficial-tariff-section__services {
+    display: flex;
+    gap: 150px;
+}
+
+}
+
