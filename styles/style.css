@@ -1841,7 +1841,8 @@ ul li {
 .mts-dealer-burger-menu,
 .mts-dealer-header-icon-mobile,
 .Servise-modal,
-.mts-tarif-burger-menu {
+.mts-tarif-burger-menu,
+.mts-burger-modal {
     display: none;
 }
 
