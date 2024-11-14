@@ -1142,12 +1142,12 @@ header {
     width: 100%;
 }
 
-.logo-container {
+/* .logo-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-}
+} */
 
 .mts-tarif-burger-menu {
     color: #fff;
@@ -1840,7 +1840,8 @@ ul li {
 .dealer-mobile-modal,
 .mts-dealer-burger-menu,
 .mts-dealer-header-icon-mobile,
-.Servise-modal {
+.Servise-modal,
+.mts-tarif-burger-menu {
     display: none;
 }
 
@@ -1867,6 +1868,16 @@ ul li {
     font-size: 24px;
     cursor: pointer;
     color: #333;
+}
+
+.mts-tarif-burger-menu {
+    display: block;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 /* Модальное окно бургер-меню */
