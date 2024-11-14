@@ -43,6 +43,7 @@
                         </clipPath>
                         </defs>
                         </svg>
+                        <div class="mts-tarif-burger-menu" id="mts-tarif-burgerMenu">☰</div>
                 </div>
         
                 <!-- Основное меню -->
@@ -110,13 +111,13 @@
             </div>
             <div class="tarif-wrapper-mobile">
                 <p>Домашний интернет</p>
-                <svg id="openServiceModal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <svg class="openServiceModal-icon" id="openServiceModal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <rect width="24" height="24" fill="white" fill-opacity="0.01"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4 1.5C4.24546 1.5 4.44961 1.67688 4.49194 1.91012L4.5 2V3.04148C5.91886 3.27952 7 4.5135 7 6C7 7.4865 5.91886 8.72048 4.5 8.95852V22C4.5 22.2761 4.27614 22.5 4 22.5C3.75454 22.5 3.55039 22.3231 3.50806 22.0899L3.5 22V8.95852C2.08114 8.72048 1 7.4865 1 6C1 4.5135 2.08114 3.27952 3.5 3.04148V2C3.5 1.72386 3.72386 1.5 4 1.5ZM4 8C5.10457 8 6 7.10457 6 6C6 4.89543 5.10457 4 4 4C2.89543 4 2 4.89543 2 6C2 7.10457 2.89543 8 4 8ZM12 1.5C12.2455 1.5 12.4496 1.67688 12.4919 1.91012L12.5 2V15.0415C13.9189 15.2795 15 16.5135 15 18C15 19.4865 13.9189 20.7205 12.5 20.9585V22C12.5 22.2761 12.2761 22.5 12 22.5C11.7545 22.5 11.5504 22.3231 11.5081 22.0899L11.5 22V20.9585C10.0811 20.7205 9 19.4865 9 18C9 16.5135 10.0811 15.2795 11.5 15.0415V2C11.5 1.72386 11.7239 1.5 12 1.5ZM14 18C14 19.1046 13.1046 20 12 20C10.8954 20 10 19.1046 10 18C10 16.8954 10.8954 16 12 16C13.1046 16 14 16.8954 14 18ZM20.4919 1.91012C20.4496 1.67688 20.2455 1.5 20 1.5C19.7239 1.5 19.5 1.72386 19.5 2V7.04148C18.0811 7.27952 17 8.5135 17 10C17 11.4865 18.0811 12.7205 19.5 12.9585V22L19.5081 22.0899C19.5504 22.3231 19.7545 22.5 20 22.5C20.2761 22.5 20.5 22.2761 20.5 22V12.9585C21.9189 12.7205 23 11.4865 23 10C23 8.5135 21.9189 7.27952 20.5 7.04148V2L20.4919 1.91012ZM20 12C21.1046 12 22 11.1046 22 10C22 8.89543 21.1046 8 20 8C18.8954 8 18 8.89543 18 10C18 11.1046 18.8954 12 20 12Z" fill="#333333"/>
                 </svg>
             </div>
     
-            <div class="swiper-container" id="home-internet-slider">
+            <div class="swiper-container home-internet-slider" id="home-internet-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="card">
@@ -200,7 +201,7 @@
                 <div class="swiper-pagination"></div>
             </div>
     
-            <div class="swiper-container" id="home-tv-slider">
+            <div class="swiper-container home-tv-slider" id="home-tv-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="card">
@@ -260,7 +261,7 @@
             </div>     
     
             
-            <div class="swiper-container" id="home-telephone-slider">
+            <div class="swiper-container home-telephone-slider" id="home-telephone-slider">
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">     
@@ -325,7 +326,7 @@
             <div class="swiper-pagination"></div>
             </div>
           
-            <div class="swiper-container" id="home-sput-tv-slider">
+            <div class="swiper-container home-sput-tv-slider" id="home-sput-tv-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="card no-hit">
@@ -459,7 +460,7 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__bottom-text">mts-gpon.ru – Официальный дилер услуг ПАО МТС. Домашний Интернет, ТВ от ПАО МТС. Официальная заявка на Подключение.</p>
+                <p class="footer__bottom-text footer__bottom-text-tarif">mts-gpon.ru – Официальный дилер услуг ПАО МТС. Домашний Интернет, ТВ от ПАО МТС. Официальная заявка на Подключение.</p>
                 <div class="footer__policy-links">
                     <a href="#" class="footer__policy-link">Политика конфиденциальности</a>
                     <a href="#" class="footer__policy-link">Политика обработки файлов cookie</a>
@@ -503,6 +504,33 @@
             </div>
         </div>
 
+        <div class="mts-burger-modal" id="mtsBurgerModal">
+            <div class="mts-burger-header">
+                <span class="mts-burger-location">Тюмень — Тюменская область</span>
+                <button class="mts-burger-close" id="mtsBurgerClose">×</button>
+            </div>
+        
+            <div class="mts-burger-search">
+                <input type="text" placeholder="Поиск" class="mts-burger-input">
+                <button class="mts-burger-search-btn">🔍</button>
+            </div>
+        
+            <nav class="mts-burger-nav">
+                <ul class="mts-burger-tabs">
+                    <li class="active-tab">Частным</li>
+                    <li>Бизнесу</li>
+                    <li>Ещё ▾</li>
+                </ul>
+                <h3>Личные кабинеты</h3>
+                <ul class="mts-burger-links">
+                    <li><a href="#">Мобильная связь</a></li>
+                    <li><a href="#">Интернет и ТВ</a></li>
+                    <li><a href="#">Спутниковое ТВ</a></li>
+                    <li><a href="#">МТС Деньги</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 new Swiper('#home-telephone-slider', {
@@ -520,6 +548,30 @@
                     slidesPerGroup: 1, // Прокручиваем по одной карточке
                 });
             });
+        </script>
+
+        <script>
+// Получаем элементы
+const burgerMenu = document.getElementById('mts-tarif-burgerMenu');
+const burgerModal = document.getElementById('mtsBurgerModal');
+const burgerClose = document.getElementById('mtsBurgerClose');
+
+// Открытие бургер-меню
+burgerMenu.addEventListener('click', () => {
+    burgerModal.style.display = 'flex';
+});
+
+// Закрытие бургер-меню
+burgerClose.addEventListener('click', () => {
+    burgerModal.style.display = 'none';
+});
+
+// Закрытие бургер-меню при клике вне его содержимого
+window.addEventListener('click', (event) => {
+    if (event.target === burgerModal) {
+        burgerModal.style.display = 'none';
+    }
+});
         </script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <script src="../scripts/servise-modal.js "></script>

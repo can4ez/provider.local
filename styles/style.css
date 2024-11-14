@@ -6,8 +6,18 @@
     padding: 0;
 }
 
-body {
+@font-face {
     font-family: 'mts-reg';
+    src: url('../font/MTSText-Regular.ttf') format('truetype');
+}
+:root {
+    --color: #111;
+    ---color: #ff0032;
+    ----color: #fff;
+}
+
+body {
+    font-family: 'mts-reg', sans-serif;
 }
 
 .center {
@@ -22,7 +32,7 @@ body {
 .promo__banner_circle {
     background-image: url(../img/circle-background.png);
     background-position: center -70px;
-    background-size: 2560px 762px;
+    background-size: 100vw 100vw;
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
@@ -46,30 +56,31 @@ header {
 
 .main__promo {
     position: relative;
+    padding-top: 5%;
 }
 
 .header__place {
     display: flex;
+    align-items: center;
     gap: 5px;
 }
+
 
 .header__phoneNumber {
     display: flex;
     gap: 10px;
-    font-size: 20px;
     font-weight: 600;
-    align-items: center;
-    justify-content: center;
 }
 
 .place__city {
     color: #fff;
-    font-size: 16px;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 .phoneNumber__number {
     color: #fff;
+    font-size: 2rem;
 }
 
 .main__promo {
@@ -84,24 +95,24 @@ header {
 }
 
 .info__title {
-    font-size: 52px;
+    font-size: 3rem;
     color: #fff;
 }
 
 .info__subtitle {
-    font-size: 26px;
+    font-size: 2rem;
     color: #fff;
 }
 
 .button {
     margin-top: auto;
-    background: #ff0032;
+    background: var(---color);
     border-radius: 10px;
     padding: 15px 25px;
     border: 0;
     outline: 0;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.5rem;
     line-height: 22px;
     text-align: center;
     color: #fff;
@@ -115,12 +126,12 @@ header {
     left: 0; /* Прижимаем к левому краю */
     width: 100%; /* Ширина на всю страницу */
     height: 125px; /* Установка высоты, равной оставляемому пространству */
-    background-color: black; /* Черный фон */
-    border-top: 0.1px solid white; /* Белый верхний бордер */
+    background-color: var(--color); /* Черный фон */
+    border-top: 0.1px solid #fff; /* Белый верхний бордер */
     display: flex; /* Для горизонтального выравнивания элементов */
     justify-content: space-between; /* Распределяем пространство между элементами */
     align-items: center; /* Центрируем элементы по вертикали */
-    color: white; /* Цвет текста белый для контраста */
+    color: #fff; /* Цвет текста белый для контраста */
     z-index: 1000; /* Чтобы блок был выше других элементов */
 }
 
@@ -130,7 +141,7 @@ header {
 }
 
 .number {
-    font-size: 22px;
+    font-size: 2rem;
     font-weight: 500;
     color: #2d6cf9;
 }
@@ -142,19 +153,20 @@ header {
     padding: 15px 30px;
     transition: background-color .3s;
     color: #fff;
-    font-size: 18px;
+    font-size: 2rem;
     font-weight: 500;
     line-height: 1.2;
     text-align: center;
 }
 
 .dark-theme .fixed__block .fixed__button_block {
-    border: 1px solid var(--Fill-White, #fff);
-    background: var(--Fill-Black, #000);
+    border: 1px solid var(--Fill-#fff, #fff);
+    background: var(--Fill-var(--color), #000);
 }
 
 .tarif {
     margin-top: 50px;
+
 }
 
 .tarif-wrapper {
@@ -165,8 +177,8 @@ header {
 }
 
 .tarif-wrapper p {
-    color: white;
-    font-size: 22px;
+    color: #fff;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -175,11 +187,11 @@ header {
     padding: 10px;
     border-bottom: 2px solid transparent; /* Default state without underline */
     font-weight: bold;
-    color: white;
+    color: #fff;
 }
 
 .tabs-wrapper.active-tab {
-    border-bottom: 3px solid #ff0000; /* Red underline for the active tab */
+    border-bottom: 3px solid var(---color); /* Red underline for the active tab */
 }
 
 .cards {
@@ -196,61 +208,39 @@ header {
     background-color: #2f2f37;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
     margin-bottom: 50px;
     height: 100%;
+    min-height: 700px;
 }
 
 .card-mobile {
     height: 350px;
 }
 
-#home-telephone {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between cards */
-}
 
-#home-telephone .card {
-    width: 300px; /* Set a fixed width for consistent layout */
-    height: 300px; /* Set a fixed height for uniformity */
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    background-color: #2f2f37;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
 
-#home-telephone .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    min-height: 200px;
-}
-
-#home-telephone-slider {
+.home-telephone-slider {
     max-width: 100vw;
     overflow-x: hidden;
     padding: 0 10px;
 }
 
 /* Для карточек внутри слайдера */
-#home-telephone-slider .swiper-slide {
-    width: auto;
-    max-width: 90vw;
+.home-telephone-slider .swiper-slide {
+    width: calc(auto - 60px);
+    max-width: 100vw;
     height: auto;
 }
 
 
-#home-telephone-slider,
-#home-internet-slider,
-#home-tv-slider,
-#home-sput-tv-slider {
+.home-telephone-slider,
+.home-internet-slider,
+.home-tv-slider,
+.home-sput-tv-slider {
     max-width: 100vw; /* Ограничиваем ширину слайдера */
     height: 100%;
     overflow: hidden;
@@ -258,7 +248,6 @@ header {
 
 .swiper-wrapper {
     display: flex;
-    gap: 10px; /* Уменьшаем отступы между карточками */
 }
 
 .swiper-slide {
@@ -293,7 +282,7 @@ header {
     background-color: #2f2f37;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: auto;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -309,15 +298,16 @@ header {
     padding: 20px;
 }
 
-#home-telephone-slider .card {
-    min-height: 320px; /* Устанавливаем меньшую минимальную высоту для карточек */
+.home-telephone-slider .card {
+    min-height: 400px; /* Устанавливаем меньшую минимальную высоту для карточек */
     height: auto; /* Убираем фиксированную высоту */
     width: 250px;
 }
 
-#home-telephone-slider .card-content {
-    min-height: 200px; /* Уменьшаем минимальную высоту контента карточек */
+.home-telephone-slider .card-content {
+    min-height: 250px; /* Уменьшаем минимальную высоту контента карточек */
 }
+
 
 
 .swiper-button-prev,
@@ -333,6 +323,7 @@ header {
 /* Кастомная пагинация */
 .swiper-pagination {
     position: relative;
+    padding-top: 20px;
 }
 
 /* Стили для всех точек пагинации */
@@ -347,7 +338,7 @@ header {
 
 /* Стили для активной точки пагинации */
 .swiper-pagination-bullet-active {
-    background-color: #ff0000; /* Красный цвет для активной точки */
+    background-color: var(---color); /* Красный цвет для активной точки */
     opacity: 1; /* Полностью непрозрачная активная точка */
 }
 
@@ -370,7 +361,7 @@ header {
 }
 
 
-#home-telephone-slider {
+.home-telephone-slider {
     position: relative; /* Делаем родительский контейнер позиционированным */
     max-width: 100%;
     overflow: hidden;
@@ -381,16 +372,16 @@ header {
 /* Дополнительно, если иконки внутри стрелок */
 .swiper-container .swiper-button-prev::after,
 .swiper-container .swiper-button-next::after {
-    font-size: 12px; /* Уменьшаем размер иконок стрелок */
+    font-size: 1.5rem; /* Уменьшаем размер иконок стрелок */
 }
 
 .swiper-container .swiper-button-prev:hover,
 .swiper-container .swiper-button-next:hover {
-    color: #ff0032; /* Белый цвет иконки */
+    color: var(---color); /* Белый цвет иконки */
     font-weight: 1000;
 }
 
-#home-telephone-slider {
+.home-telephone-slider {
     position: relative; /* Для позиционирования стрелок относительно слайдера */
     max-width: 100%;
     overflow: hidden;
@@ -416,7 +407,7 @@ header {
 }
 
 
-#home-telephone-slider {
+.home-telephone-slider {
     position: relative;
     max-width: 100%;
 
@@ -424,15 +415,15 @@ header {
     overflow: hidden;
 }
 
-#home-telephone-slider .swiper-slide {
+.home-telephone-slider .swiper-slide {
     width: 100%;
     max-width: 100%;
     padding: 0 10px; /* Небольшие отступы по бокам */
 }
 
-#home-telephone-slider .card {
-    width: 100%; /* Карточка занимает всю ширину слайда */
-    max-width: 100%;
+.home-telephone-slider .card {
+    width: 70%; /* Карточка занимает всю ширину слайда */
+    max-width: 70%;
     height: auto; /* Автоматическая высота */
 }
 
@@ -440,11 +431,11 @@ header {
 .swiper-wrapper {
     display: flex;
     justify-content: flex-start; /* Центрируем контент слайдера */
-    gap: 20px; /* Расстояние между карточками */
 }
 
 .swiper-slide .card {
-    height: 90vh; /* Фиксированная высота для всех карточек */
+    height: 60%; /* Фиксированная высота для всех карточек */
+    max-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -471,7 +462,7 @@ header {
     margin-top: auto; /* Располагает цену внизу карточки */
     font-size: 1.5em;
     font-weight: bold;
-    color: white;
+    color: #fff;
 }
 
 
@@ -497,37 +488,37 @@ header {
 
 .tarif-title {
     font-weight: bold;
-    font-size: 1.3em;
-    color: white;
+    font-size: 1.5em;
+    color: #fff;
 }
 
 .tarif-title-change {
     color: #fff;
-    font-size: 28px;
+    font-size: 2.5rem;
 }
 
 .tarif-subtitle {
-    color: white;
-    font-size: 1em;
+    color: #fff;
+    font-size: 1.3em;
     line-height: 1.4;
     margin-bottom: 10px;
 }
 
 .tarif-detail, .tv-channels, .mobile-data, .data-details, .minutes {
     font-size: 1.1em;
-    color: white;
+    color: #fff;
     margin-bottom: 10px;
 }
 
 .tarif-detail, .mobile-data {
-    font-size: 0.9em;
+    font-size: 1em;
     margin-bottom: 0;
 }
 
 .speed, .price, .data-details, .minutes, .tv-channels{
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: bold;
-    color: white;
+    color: #fff;
     padding-top: 5px;
 }
 
@@ -545,7 +536,7 @@ header {
     appearance: none;
     width: 20px;
     height: 20px;
-    background-color: #f00;
+    background-color: var(---color);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -579,7 +570,7 @@ header {
 }
 
 .speed-options input[type="radio"]:checked {
-    border-color: #ff0032; /* Red border for selected option */
+    border-color: var(---color); /* Red border for selected option */
 }
 
 
@@ -591,8 +582,8 @@ header {
 .extras {
     display: flex;
     align-items: center;
-    font-size: 0.9em;
-    color: white;
+    font-size: 1em;
+    color: #fff;
     margin-top: 10px;
 }
 
@@ -605,7 +596,7 @@ header {
 .price {
     font-size: 1.5em;
     font-weight: bold;
-    color: white;
+    color: #fff;
     margin-top: auto; /* Pushes price to the bottom */
 
 }
@@ -629,9 +620,10 @@ header {
 
 
 .connect-btn {
-    background-color: #ff0000;
+    background-color: var(---color);
     color: #fff;
     border: none;
+    font-size: 1.2rem;
 }
 
 .more-btn {
@@ -641,7 +633,7 @@ header {
 }
 
 .connect-btn:hover {
-    background-color: #d00000;
+    background-color: var(---color);
 }
 
 .more-btn:hover {
@@ -654,7 +646,7 @@ header {
     padding: 15px 0;
     background-color: #f1f1f1;
     color: #333;
-    font-size: 16px;
+    font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
     border-radius: 5px;
@@ -694,7 +686,7 @@ header {
     position: absolute;
     top: 15px;
     left: 15px;
-    background-color: #ff0000;
+    background-color: var(---color);
     color: #fff;
     font-size: 0.8em;
     font-weight: bold;
@@ -730,7 +722,7 @@ header {
     left: -5px;       /* Start line slightly before the text */
     width: 120%;      /* Make the line a bit longer to cover the text diagonally */
     height: 1.5px;      /* Thickness of the line */
-    background-color: red;
+    background-color: var(---color);
     transform: rotate(-10deg);  /* Adjust angle as needed */
     transform-origin: center;
 }
@@ -750,7 +742,11 @@ header {
 
 .swiper-wrapper {
     display: flex;
-    gap: 2%;
+    gap: 10px;
+}
+
+.swiper-slide .card-mobile {
+    height: 30vh;
 }
 
 
@@ -758,7 +754,7 @@ header {
 .footer {
     background-color: #101010;
     padding: 40px 20px;
-    color: white;
+    color: #fff;
     font-family: Arial, sans-serif;
     border-top: 1px solid #333;
 }
@@ -789,7 +785,7 @@ header {
 
 .footer__dealer {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1.5rem;
 }
 
 .footer__phone {
@@ -797,7 +793,7 @@ header {
 }
 
 .footer__phone-number {
-    font-size: 24px;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
@@ -809,13 +805,13 @@ header {
 }
 
 .footer__link {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.5rem;
 }
 
 .footer__dot {
-    color: red;
+    color: var(---color);
 }
 
 .footer__nav {
@@ -830,7 +826,7 @@ header {
 .footer__column-title {
     font-weight: 700;
     margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 1.5rem;
     color: #c6c2c2;
 }
 
@@ -857,7 +853,7 @@ header {
 .footer__item a {
     color: #c6c2c2;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
@@ -871,14 +867,18 @@ header {
     border-top: 1px solid #333;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     gap: 10px;
 }
 
 .footer__bottom-text {
-    font-size: 12px;
+    font-size: 1rem;
     text-align: center;
     width: 50vw;
+    padding-bottom: 150px;
+}
+
+.footer__bottom-text-tarif {
+    padding-bottom: 0;
 }
 
 .footer__policy-links {
@@ -888,13 +888,13 @@ header {
 
 .footer__policy-link {
     color: #c6c2c2;
-    font-size: 12px;
+    font-size: 1rem;
     transition: color 0.3s;
     text-decoration: underline;
 }
 
 .footer__policy-link:hover {
-    color: white;
+    color: #fff;
 }
 
 .modal {
@@ -919,7 +919,7 @@ header {
     height: 100%;
     background-color: #1c1c1c; /* Dark background for form area */
     padding: 40px 60px; /* Inner padding for form */
-    color: #fff; /* White text color */
+    color: #fff; /* #fff text color */
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3);
     transition: right 0.3s ease; /* Smooth slide-in */
     overflow-y: auto;
@@ -938,19 +938,19 @@ header {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 24px;
+    font-size: 2.5rem;
     color: #aaa;
     cursor: pointer;
     transition: color 0.2s;
 }
 
 .close-button:hover {
-    color: #ff0000;
+    color: var(---color);
 }
 
 /* Title Styling */
 .modal-content h2 {
-    font-size: 28px;
+    font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
@@ -972,7 +972,7 @@ header {
 .modal-form input[type="tel"] {
     width: 40%;
     padding: 12px;
-    font-size: 16px;
+    font-size: 1.5rem;
     border: 1px solid #ffffff;
     border-radius: 5px;
     background-color: #333;
@@ -985,31 +985,31 @@ header {
 }
 
 .submit-button {
-    background-color: #ff0000;
+    background-color: var(---color);
     color: #fff;
     padding: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: bold;
     text-transform: uppercase;
     width: 30%;
 }
 
 .submit-button:hover {
-    background-color: #cc0000;
+    background-color: var(---color);
 }
 
 /* Additional Text at the Bottom */
 .modal-content p {
-    font-size: 12px;
+    font-size: 1rem;
     color: #888;
     margin-top: 15px;
 }
 
 .modal-content p a {
-    color: #ff0000;
+    color: var(---color);
     text-decoration: none;
 }
 
@@ -1024,7 +1024,7 @@ header {
 
 .burger-menu {
     display: none;
-    font-size: 24px;
+    font-size: 2.5rem;
     color: #fff;
     cursor: pointer;
 }
@@ -1050,8 +1050,8 @@ header {
 }
 
 .close-menu {
-    font-size: 24px;
-    color: #ff0000;
+    font-size: 2.5rem;
+    color: var(---color);
     cursor: pointer;
     align-self: flex-end;
     margin-bottom: 20px;
@@ -1074,7 +1074,7 @@ header {
     color: #fff;
     font-size: 18px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 2.5rem;
 }
 
 .header-mobile {
@@ -1106,12 +1106,12 @@ header {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1.2rem;
 }
 
 .left-links a:hover,
 .right-links a:hover {
-    color: #ff0032;
+    color: var(---color);
 }
 
 .right-links {
@@ -1122,7 +1122,7 @@ header {
 
 .location-icon {
     color: #aaa;
-    font-size: 14px;
+    font-size: 1.2rem;
 }
 
 /* Основное меню */
@@ -1145,6 +1145,13 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mts-tarif-burger-menu {
+    color: #fff;
+    font-size: 2rem;
 }
 
 .logo {
@@ -1167,11 +1174,11 @@ header {
 .main-nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.5rem;
 }
 
 .main-nav a:hover {
-    color: #ff0032;
+    color: var(---color);
 }
 
 .header-actions {
@@ -1230,7 +1237,7 @@ header {
 
 .login-button,
 .catalog-button {
-    background-color: #ff0032;
+    background-color: var(---color);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -1240,7 +1247,7 @@ header {
 
 .login-button:hover,
 .catalog-button:hover {
-    background-color: #d00028;
+    background-color: var(---color);
 }
 
 .breadcrumbs {
@@ -1256,7 +1263,7 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 14px;
+    font-size: 1.5rem;
     color: #6c757d;
 }
 
@@ -1282,17 +1289,17 @@ header {
 /* Блок проверки адреса */
 .address-check-container {
     background-color: #1c1c1c;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    max-width: 800px;
+    max-width: 1500px;
     margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .address-check-title {
-    font-size: 18px;
+    font-size: 2rem;
     margin-bottom: 15px;
-    color: white;
+    color: #fff;
 }
 
 .address-input-wrapper {
@@ -1310,7 +1317,7 @@ header {
 }
 
 .check-button {
-    background-color: #ff0032;
+    background-color: var(---color);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -1319,7 +1326,7 @@ header {
 }
 
 .check-button:hover {
-    background-color: #d00028;
+    background-color: var(---color);
 }
 
 .map-link {
@@ -1335,22 +1342,22 @@ header {
 
 .map-link-block {
     display: flex;
-    align-items: start;
+    align-items: center;
 }
 
 .callback-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px;
+    padding: 50px;
     border-radius: 20px;
     background: linear-gradient(to right, #8364f6, #ff79c6);
-    max-width: 900px;
+    max-width: 1500px;
     margin: 20px auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Обрезка содержимого за границами блока */
     position: relative;
-    height: 40%;
+    height: 30vh;
 }
 
 /* Контентная часть */
@@ -1361,7 +1368,7 @@ header {
 
 /* Заголовок */
 .callback-title {
-    font-size: 28px;
+    font-size: 2.5rem;
     color: #fff;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -1374,36 +1381,42 @@ header {
 }
 
 .callback-input {
-    padding: 15px;
+    padding: 25px;
     border-radius: 10px;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 1.2rem;
     background-color: rgba(255, 255, 255, 0.2);
     color: #fff;
-    width: 200px; 
+    width: 300px; 
 }
 
 .callback-button {
     padding: 15px 25px;
     border-radius: 10px;
     border: none;
-    background-color: #ff0032;
+    background-color: var(---color);
     color: #fff;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 300px;
+    font-size: 1rem;
 }
 
 .callback-button:hover {
-    background-color: #d00028;
+    background-color: var(---color);
 }
 
 /* Примечание */
 .callback-note {
-    font-size: 12px;
+    font-size: 1rem;
     color: #fff;
     margin-top: 10px;
+}
+
+.callback-note a {
+    color: #fff;
 }
 
 /* Блок с изображением */
@@ -1446,13 +1459,13 @@ header {
 }
 
 .address-modal-title {
-    font-size: 22px;
+    font-size: 2rem;
     margin: 0;
     color: #333;
 }
 
 .address-modal-subtitle {
-    font-size: 14px;
+    font-size: 1.5rem;
     color: #666;
 }
 
@@ -1468,12 +1481,12 @@ header {
     border-radius: 10px;
     border: 1px solid #ddd;
     outline: none;
-    font-size: 14px;
+    font-size: 1.5rem;
 }
 
 .address-modal-button {
     padding: 10px 20px;
-    background-color: #ff0032;
+    background-color: var(---color);
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -1482,7 +1495,7 @@ header {
 }
 
 .address-modal-button:hover {
-    background-color: #d00028;
+    background-color: var(---color);
 }
 
 .address-modal-map {
@@ -1498,7 +1511,7 @@ header {
     top: 10px;
     right: 10px;
     padding: 5px 10px;
-    background-color: #ff0032;
+    background-color: var(---color);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -1506,7 +1519,7 @@ header {
 }
 
 .close-button:hover {
-    background-color: #d00028;
+    background-color: var(---color);
 }
 
 
@@ -1541,18 +1554,18 @@ header {
 .mts-dealer-header__link,
 .mts-dealer-header__location,
 .mts-dealer-header__support {
-    font-size: 16px;
-    color: white;
+    font-size: 1.5rem;
+    color: #fff;
     text-decoration: none;
 }
 
 .mts-dealer-header__contact {
-    font-size: 18px;
-    color: white;
+    font-size: 2rem;
+    color: #fff;
 }
 
 .mts-dealer-header__phone {
-    color: white;
+    color: #fff;
     font-weight: bold;
     text-decoration: none;
 }
@@ -1571,7 +1584,7 @@ header {
     border-bottom: 1px solid #e0e0e0;
     padding-right: auto;
     padding-left: auto;
-    color: white;
+    color: #fff;
 }
 
 .mts-dealer-header__menu {
@@ -1582,8 +1595,8 @@ header {
 }
 
 .mts-dealer-header__menu-item {
-    font-size: 14px;
-    color: white;
+    font-size: 1.5rem;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -1601,8 +1614,8 @@ header {
     display: flex;
     align-items: center;
     padding: 10px 40px;
-    font-size: 14px;
-    color: white;
+    font-size: 1.5rem;
+    color: #fff;
 }
 
 .mts-dealer-breadcrumbs__link {
@@ -1611,17 +1624,17 @@ header {
 }
 
 .mts-dealer-breadcrumbs__link:hover {
-    color: white;
+    color: #fff;
 }
 
 .mts-dealer-breadcrumbs__separator {
     margin: 0 5px;
-    color: white;
+    color: #fff;
 }
 
 .mts-dealer-breadcrumbs__current {
     font-weight: bold;
-    color: white;
+    color: #fff;
 }
 
 
@@ -1630,7 +1643,7 @@ header {
     flex-direction: column;
     align-items: flex-end;
     padding: 20px;
-    max-width: 1000px;
+    max-width: 80%;
     margin: 0 auto;
     display: flex;
     align-self: flex-end;
@@ -1650,7 +1663,7 @@ header {
 
 .mtsofficial-tariff-section__cat-image {
     width: 100%;
-    max-width: 200px;
+    max-width: 400px;
 }
 
 .mtsofficial-tariff-section__info {
@@ -1658,14 +1671,15 @@ header {
 }
 
 .mtsofficial-tariff-section__title {
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
-    color: white;
+    color: #fff;
+    padding-bottom: 10px;
 }
 
 .mtsofficial-tariff-section__subtitle {
-    font-size: 14px;
-    color: white;
+    font-size: 1.5rem;
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -1676,7 +1690,7 @@ header {
 }
 
 .mtsofficial-tariff-section__service {
-    font-size: 14px;
+    font-size: 1.5rem;
 }
 
 .mtsofficial-tariff-section__icon {
@@ -1684,16 +1698,15 @@ header {
 }
 
 .accordion {
-    color: white;
+    color: #fff;
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 24px;
+    font-size: 2.5rem;
     line-height: 30px;
     padding: 20px 12px;
     transition: 0.25s;
-    border-radius: 5px;
     position: relative;
     border-top: 1px solid #ccccd3;
     border-bottom: 1px;
@@ -1707,13 +1720,13 @@ header {
 }
 
 .accordion.active .accordion-arrow path {
-    fill: #e60000; /* Красный цвет стрелок */
+    fill: var(---color); /* Красный цвет стрелок */
 }
 
 /* Активная стрелка */
 .accordion.active .accordion-arrow {
     transform: rotate(180deg);
-    fill: #e60000; /* Закрашенная стрелка красным цветом при активном состоянии */
+    fill: var(---color); /* Закрашенная стрелка красным цветом при активном состоянии */
 }
 
 .panel {
@@ -1729,6 +1742,10 @@ header {
     display: flex;
 }
 
+.panel-second img {
+    padding-bottom: 10px;
+}
+
 .kion {
     width: 40px;
     height: 40px;
@@ -1737,7 +1754,7 @@ header {
 .panel > div {
     padding: 6px 10px;
     text-align: justify;
-    color: white;
+    color: #fff;
 }
 
 ul {
@@ -1748,44 +1765,45 @@ ul {
 
 ul li {
     margin-bottom: 8px;
-    color: white;
+    color: #fff;
 }
 
 .mtsofficial-tariff-section__price {
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
-    color: #e60000;
+    color: var(---color);
     margin: 20px 0;
     float: right;
 }
 
 .mtsofficial-tariff-section__button {
-    background-color: #e60000;
+    background-color: var(---color);
     color: #fff;
-    font-size: 16px;
+    font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    height: 5vh;
 }
 
 .mtsofficial-tariff-section__button:hover {
-    background-color: #cc0000;
+    background-color: var(---color);
 }
 
 /* Стили блока с описанием тарифа */
 .mtsofficial-tariff-section__details {
     margin-top: 40px;
-    width: 55%;
+    width: 50%;
 }
 
 .mtsofficial-tariff-section__details h2 {
-    font-size: 24px;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: white;
+    color: #fff;
 }
 
 .mtsofficial-tariff-section__details ul {
@@ -1793,7 +1811,7 @@ ul li {
 }
 
 .mtsofficial-tariff-section__details li {
-    font-size: 16px;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
@@ -1804,18 +1822,19 @@ ul li {
 .mtsofficial-tariff-section__service-home,
 .mtsofficial-tariff-section__service-mobile {
     color: #777;
-    font-size: 16px;
+    font-size: 1.5rem;
 }
 
 .servise-plus {
-    font-size: 24px;
+    font-size: 2.5rem;
     font-weight: 700;
     padding-top: 10px;
-    color: white;
+    color: #fff;
+    display: flex;
 }
 
 .servise-plus path {
-    fill: white;
+    fill: #fff;
 }
 
 .dealer-mobile-modal,
@@ -1824,6 +1843,9 @@ ul li {
 .Servise-modal {
     display: none;
 }
+
+
+
 
 
 @media (max-width: 768px) {
@@ -1840,10 +1862,135 @@ ul li {
     z-index: -1;
 }
 
+
+.mts-burger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Модальное окно бургер-меню */
+.mts-burger-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+}
+
+/* Шапка бургер-меню */
+.mts-burger-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mts-burger-location {
+    font-size: 14px;
+    color: #666;
+}
+
+.mts-burger-close {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Поле поиска */
+.mts-burger-search {
+    display: flex;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mts-burger-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.mts-burger-search-btn {
+    margin-left: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Навигация */
+.mts-burger-nav {
+    padding: 15px;
+}
+
+.mts-burger-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.mts-burger-tabs li {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+}
+
+.mts-burger-tabs .active-tab {
+    border-bottom: 2px solid #ff0032;
+}
+
+.mts-burger-links {
+    list-style: none;
+    padding: 0;
+}
+
+.mts-burger-links li {
+    margin-bottom: 10px;
+}
+
+.mts-burger-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+    .home-telephone-slider .card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
 .swiper-button-prev,
 .swiper-button-next {
 display: none;
 }
+
+.swiper-slide .card {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.swiper-slide .card-mobile {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;}
+
+
+    .swiper-slide {
+        width: calc(auto - 60px);
+        height: 700px;
+    }
 
 .modal-content {
     width: 100%;
@@ -1858,7 +2005,7 @@ display: none;
 }
 
 .burger-menu {
-    font-size: 24px;
+    font-size: 2.5rem;
     color: #fff;
     cursor: pointer;
     position: relative;
@@ -1889,8 +2036,8 @@ display: none;
 
 /* Кнопка закрытия */
 .close-menu {
-    font-size: 32px;
-    color: #ff0032;
+    font-size: 3rem;
+    color: var(---color);
     cursor: pointer;
     position: absolute;
     top: 20px;
@@ -1904,24 +2051,24 @@ display: none;
     }
 
     .info__title {
-        font-size: 32px;
+        font-size: 3rem;
         color: #fff;
     }
 
     .info__subtitle {
-        font-size: 20px;
+        font-size: 2rem;
         color: #fff;
     }
 
     .button {
         margin-top: auto;
-        background: #ff0032;
+        background: var(---color);
         border-radius: 10px;
         padding: 15px 25px;
         border: 0;
         outline: 0;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 1.5rem;
         line-height: 22px;
         text-align: center;
         color: #fff;
@@ -1939,13 +2086,18 @@ display: none;
     }
 
     .place__city {
-        font-size: 14px;
+        font-size: 1.5rem;
         font-weight: bold;
     }
 
     .header__for-home {
-        font-size: 14px;
+        font-size: 1.5rem;
         color: #c6c2c2;
+    }
+
+    .map-icon {
+        width: 25px;
+        height: 25px;
     }
 
     .phoneNumber__number {
@@ -1966,13 +2118,13 @@ display: none;
     }
 
     .info__title {
-        font-size: 28px;
+        font-size: 2rem;
         line-height: 1.2;
         color: #fff;
     }
 
     .info__subtitle {
-        font-size: 16px;
+        font-size: 1.2rem;
         line-height: 1.4;
         color: #c6c2c2;
         margin-bottom: 20px;
@@ -1988,7 +2140,7 @@ display: none;
     .button {
         width: 100%;
         padding: 15px;
-        font-size: 16px;
+        font-size: 1.5rem;
         font-weight: 600;
     }
 
@@ -2010,13 +2162,13 @@ display: none;
     }
 
     .place__city {
-        font-size: 16px;
+        font-size: 1.5rem;
         font-weight: bold;
         color: #fff;
     }
 
     .header__for-home {
-        font-size: 14px;
+        font-size: 1.5rem;
         color: #c6c2c2;
     }
 
@@ -2037,29 +2189,35 @@ display: none;
         align-items: center;
         text-align: center;
         gap: 5px;
-        font-size: 14px;
+        font-size: 1.5rem;
         color: #fff;
     }
 
     .burger-menu {
         display: block;
-        font-size: 24px;
+        font-size: 2.5rem;
         color: #fff;
         cursor: pointer;
     }
 
     .tarif-title-change {
         color: #fff;
-        font-size: 24px;
+        font-size: 2rem;
         padding-bottom: 10px;
         padding-top: 50px;
     }
     
+    .footer__bottom-text {
+        font-size: 1rem;
+        text-align: center;
+        width: 50vw;
+        padding-bottom: 0;
+    }
 
     
     /* Стили для бургер-меню */
     .burger-menu {
-        font-size: 24px;
+        font-size: 2rem;
         color: #fff;
         cursor: pointer;
     }
@@ -2070,7 +2228,7 @@ display: none;
 
     .promo__img img {
         width: 100%;
-        height: auto;
+        height: 25vh;
     }
 
     .tarif-wrapper-mobile {
@@ -2078,11 +2236,12 @@ display: none;
         justify-content: space-between;
         padding-top: 30px;
         padding-bottom: 20px;
+        align-items: center;
     }
 
     .tarif-wrapper-mobile p {
-        color: white;
-        font-size: 24px;
+        color: #fff;
+        font-size: 1.5rem;
     }
 
     .tarif-wrapper {
@@ -2091,8 +2250,8 @@ display: none;
 
     /* Отображаем активную вкладку */
     .tabs-wrapper.active-tab {
-        border-bottom: 3px solid #ff0000;
-        color: #ff0000;
+        border-bottom: 3px solid var(---color);
+        color: var(---color);
     }
 
 
@@ -2124,8 +2283,8 @@ display: none;
     /* Заголовок модального окна */
     .modal-servise-content h2 {
         text-align: center;
-        color: black;
-        font-size: 24px;
+        color: var(--color);
+        font-size: 2rem;
         margin-bottom: 20px;
     }
     
@@ -2134,13 +2293,13 @@ display: none;
         position: absolute;
         top: 10px;
         right: 10px;
-        font-size: 24px;
-        color: #ff0032;
+        font-size: 2.5rem;
+        color: var(---color);
         cursor: pointer;
     }
     
     .close-button-modal {
-        font-size: 30px;
+        font-size: 2rem;
         float: right;
     }
 
@@ -2155,7 +2314,7 @@ display: none;
     .modal-form-servise label {
         display: flex;
         align-items: center;
-        font-size: 18px;
+        font-size: 1.3rem;
         gap: 10px;
     }
     
@@ -2163,7 +2322,7 @@ display: none;
         appearance: none;
         width: 20px;
         height: 20px;
-        border: 2px solid #ff0032;
+        border: 2px solid ---color;
         border-radius: 50%;
         position: relative;
         cursor: pointer;
@@ -2177,7 +2336,7 @@ display: none;
         left: 50%;
         width: 10px;
         height: 10px;
-        background-color: #ff0032;
+        background-color: var(---color);
         border-radius: 50%;
         transform: translate(-50%, -50%);
     }
@@ -2185,9 +2344,9 @@ display: none;
     /* Кнопка выбора услуги */
     .submit-button-servise {
         padding: 15px;
-        background-color: #ff0032;
+        background-color: var(---color);
         color: #fff;
-        font-size: 18px;
+        font-size: 1.5rem;
         font-weight: bold;
         text-align: center;
         border: none;
@@ -2197,7 +2356,7 @@ display: none;
     }
     
     .submit-button-servise:hover {
-        background-color: #d00000;
+        background-color: var(---color);
     }
     
     /* Дополнительные стили для формы */
@@ -2206,10 +2365,10 @@ display: none;
     }
     
     .modal-form-servise input[type="radio"]:checked + label {
-        color: #ff0032;
+        color: var(---color);
     }
 
-    #home-telephone img {
+    .home-telephone img {
         display: none;
     }
 
@@ -2226,7 +2385,7 @@ display: none;
 
 
     .footer__phone-number {
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 700;
     }
 
@@ -2235,7 +2394,7 @@ display: none;
     }
 
     .footer__link {
-        font-size: 14px;
+        font-size: 1.5rem;
     }
 
     .footer__nav {
@@ -2250,7 +2409,7 @@ display: none;
     }
 
     .footer__column-title {
-        font-size: 16px;
+        font-size: 1.5rem;
         margin-bottom: 20px;
     }
 
@@ -2259,7 +2418,7 @@ display: none;
     }
 
     .footer__item a {
-        font-size: 12px;
+        font-size: 1rem;
     }
 
     .footer__bottom {
@@ -2269,13 +2428,13 @@ display: none;
     }
 
     .footer__bottom-text {
-        font-size: 12px;
+        font-size: 1rem;
         text-align: left;
         width: 50vw;
     }
 
     .footer__bottom-text {
-        font-size: 12px;
+        font-size: 1rem;
         width: 80%;
         color:#74747c ;
     }
@@ -2286,7 +2445,7 @@ display: none;
     }
 
     .footer__policy-link {
-        font-size: 12px;
+        font-size: 1rem;
         text-decoration: none;
         color: #74747c;
     }
@@ -2333,10 +2492,10 @@ display: none;
         border-radius: 10px;
         border: 0;
         background-color: #000;
-        padding: 15px 30px;
+        padding: 10px 20px;
         transition: background-color .3s;
         color: #fff;
-        font-size: 16px;
+        font-size: 1.3rem;
         font-weight: 500;
         line-height: 1.2;
         text-align: center;
@@ -2347,9 +2506,25 @@ display: none;
         width: 100%;
     }
 
+    .number {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #2d6cf9;
+    }
+
+    .openServiceModal-icon path {
+        fill: #777;
+    }
+
 
 
     /* TARIF STYLE FLEX */
+
+    .address-check-title {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        color: #fff;
+    }
 
     .footer-tarif {
         margin-bottom: 0;
@@ -2401,9 +2576,9 @@ display: none;
     }
 
     .mts-dealer-header-small-icon-mobile-burger {
-        font-size: 30px;
+        font-size: 3rem;
         cursor: pointer;
-        color: white;
+        color: #fff;
     }
 
     .mts-dealer-header-small-icon-mobile-telephone {
@@ -2463,12 +2638,12 @@ display: none;
     
     .mts-dealer-burger-menu-list a {
         color: #fff;
-        font-size: 18px;
+        font-size: 2rem;
         text-decoration: none;
     }
     
     .mts-dealer-burger-menu-list a:hover {
-        color: #ff0032;
+        color: var(---color);
     }
 
     .mts-dealer-breadcrumbs {
@@ -2530,7 +2705,7 @@ display: none;
         position: absolute;
         top: 10px;
         right: 10px;
-        font-size: 24px;
+        font-size: 2.5rem;
         color: #333;
         background: none;
         border: none;
@@ -2538,7 +2713,7 @@ display: none;
     }
     
     .dealer-mobile-modal-title {
-        font-size: 22px;
+        font-size: 2rem;
         font-weight: bold;
         margin-bottom: 20px;
     }
@@ -2549,15 +2724,15 @@ display: none;
         margin-bottom: 15px;
         border: 1px solid #ddd;
         border-radius: 5px;
-        font-size: 16px;
+        font-size: 1.5rem;
     }
     
     .dealer-mobile-modal-submit {
         width: 100%;
         padding: 10px;
-        background-color: #ff0032;
+        background-color: var(---color);
         color: #fff;
-        font-size: 16px;
+        font-size: 1.5rem;
         font-weight: bold;
         border: none;
         border-radius: 5px;
@@ -2565,17 +2740,17 @@ display: none;
     }
     
     .dealer-mobile-modal-submit:hover {
-        background-color: #d00028;
+        background-color: var(---color);
     }
     
     .dealer-mobile-modal-note {
-        font-size: 12px;
+        font-size: 1rem;
         color: #666;
         margin-top: 10px;
     }
     
     .dealer-mobile-modal-link {
-        color: #ff0032;
+        color: var(---color);
         text-decoration: underline;
     }
     
@@ -2592,8 +2767,8 @@ display: none;
     }
 
     .promo__img img {
-        max-width: 70%;
-        height: auto;
+        max-width: 60vw;
+        height: 60vh;
     }
 
     .main {
@@ -2601,15 +2776,15 @@ display: none;
     }
 
     .header__phoneNumber {
-        font-size: 24px;
+        font-size: 2.5rem;
     }
 
     .info__title {
-        font-size: 64px;
+        font-size: 4rem;
     }
 
     .info__subtitle {
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .tarif-wrapper {
@@ -2630,17 +2805,17 @@ display: none;
     .modal-form input[type="text"],
     .modal-form input[type="tel"] {
         width: 90%; /* Сделайте поля шире, чтобы занимали больше пространства */
-        font-size: 18px; /* Увеличьте размер текста */
+        font-size: 2rem; /* Увеличьте размер текста */
         padding: 15px; /* Увеличьте отступы для удобства ввода */
     }
 
     .submit-button {
         width: 50%; /* Сделайте кнопку шире */
-        font-size: 20px; /* Увеличьте размер шрифта */
+        font-size: 2rem; /* Увеличьте размер шрифта */
         padding: 20px; /* Увеличьте отступы */
     }
 
     .close-button {
-        font-size: 28px; /* Увеличьте размер кнопки закрытия */
+        font-size: 3rem; /* Увеличьте размер кнопки закрытия */
     }
 }
