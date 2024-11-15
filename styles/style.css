@@ -983,7 +983,7 @@ header {
 
 .modal-form input[type="text"],
 .modal-form input[type="tel"] {
-    width: 40%;
+    width: 50%;
     padding: 12px;
     font-size: 1.5rem;
     border: 1px solid #ffffff;
@@ -1004,10 +1004,10 @@ header {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     text-transform: uppercase;
-    width: 35%;
+    width: 40%;
 }
 
 .submit-button:hover {
@@ -1458,7 +1458,7 @@ header {
 }
 
 .address-modal-content {
-    width: 600px;
+    width: 700px;
     max-width: 90%;
     background: #fff;
     border-radius: 20px;
@@ -1525,16 +1525,12 @@ header {
     top: 10px;
     right: 10px;
     padding: 5px 10px;
-    background-color: var(---color);
-    color: #fff;
+    color: var(--color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.close-button:hover {
-    background-color: var(---color);
-}
 
 
 
@@ -1873,6 +1869,10 @@ ul li {
     margin-right: 50px;
 }
 
+.home-telephone-slider-swiper-wrapper {
+    width: 80vw;
+}
+
 
 
 
@@ -1980,6 +1980,7 @@ ul li {
     cursor: pointer;
     padding: 5px 10px;
     border-bottom: 2px solid transparent;
+    color: var(--color);
 }
 
 .mts-burger-tabs .active-tab {
@@ -2448,7 +2449,7 @@ display: none;
     }
 
     .footer__column-title {
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin-bottom: 20px;
     }
 
@@ -2473,7 +2474,7 @@ display: none;
     }
 
     .footer__bottom-text {
-        font-size: 1rem;
+        font-size: 0.7rem;
         width: 80%;
         color:#74747c ;
     }
@@ -2484,7 +2485,7 @@ display: none;
     }
 
     .footer__policy-link {
-        font-size: 1rem;
+        font-size: 0.7rem;
         text-decoration: none;
         color: #74747c;
     }
@@ -2615,7 +2616,7 @@ display: none;
     }
 
     .mts-dealer-header-small-icon-mobile-burger {
-        font-size: 3rem;
+        font-size: 2rem;
         cursor: pointer;
         color: #fff;
     }
@@ -2837,6 +2838,26 @@ display: none;
 
     .callback-image {
         width: 60%;
+    }
+
+    .address-modal-title {
+        font-size: 1rem;
+        margin: 0;
+        color: #333;
+    }
+
+    .address-modal-subtitle {
+        font-size: 0.7rem;
+        color: #666;
+    }
+
+    .address-modal-input {
+        flex: 1;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        outline: none;
+        font-size: 0.7rem;
     }
     
 }
@@ -3302,6 +3323,10 @@ display: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.search-input.expanded {
+    width: 1300px; /* Увеличенная ширина */
 }
 
 }
