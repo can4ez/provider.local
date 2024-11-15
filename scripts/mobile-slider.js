@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             swiperInstances.push(
                 new Swiper('#home-internet-slider', {
                     slidesPerView: 1,
-                    spaceBetween: 20,
+                    spaceBetween: 0,
                     pagination: {
                         el: '#home-internet-slider .swiper-pagination',
                         clickable: true,

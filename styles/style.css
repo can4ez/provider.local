@@ -167,7 +167,9 @@ header {
 
 .tarif {
     margin-top: 50px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tarif-wrapper {
@@ -175,6 +177,7 @@ header {
     gap: 20px;
     padding-bottom: 25px;
     padding-top: 25px;
+    align-self: flex-start;
 }
 
 .tarif-wrapper p {
@@ -328,12 +331,17 @@ header {
 .swiper-button-prev,
 .swiper-button-next {
     position: relative;
-    float: center;
+}
+
+/* Позиционирование стрелок относительно краёв страницы */
+.swiper-button-prev {
+    left: -30px; /* Отступ от левого края страницы */
 }
 
 .swiper-button-next {
-    float: right;
+    right: -30px; /* Отступ от правого края страницы */
 }
+
 
 /* Кастомная пагинация */
 .swiper-pagination {
@@ -387,7 +395,7 @@ header {
 /* Дополнительно, если иконки внутри стрелок */
 .swiper-container .swiper-button-prev::after,
 .swiper-container .swiper-button-next::after {
-    font-size: 1.5rem; /* Уменьшаем размер иконок стрелок */
+    font-size: 1rem; /* Уменьшаем размер иконок стрелок */
 }
 
 .swiper-container .swiper-button-prev:hover,
@@ -405,11 +413,11 @@ header {
 /* Общие стили для стрелок */
 .swiper-button-prev,
 .swiper-button-next {
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     color: #333;
@@ -419,8 +427,18 @@ header {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s, color 0.3s;
+    font-size: 0.5rem;
 }
 
+.swiper-container-btn {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 1rem;
+}
 
 .home-telephone-slider {
     position: relative;
@@ -509,6 +527,8 @@ header {
 .tarif-title-change {
     color: #fff;
     font-size: 2rem;
+    display: flex;
+    align-self: flex-start;
 }
 
 .tarif-subtitle {
@@ -1865,9 +1885,6 @@ ul li {
     margin-bottom: 20px;
 }
 
-.swiper-button-prev {
-    margin-right: 50px;
-}
 
 .home-telephone-slider-swiper-wrapper {
     width: 80vw;
@@ -2277,6 +2294,7 @@ display: none;
         padding-top: 30px;
         padding-bottom: 20px;
         align-items: center;
+        width: 100%;
     }
 
     .tarif-wrapper-mobile p {
